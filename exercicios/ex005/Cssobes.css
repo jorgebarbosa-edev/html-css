@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+@font-face {
+        font-family: 'DM Sans';
+        src: url(fonts/DM_Sans/DMSans-Italic-VariableFont_opsz\,wght.ttf) format(truetype);
+        font-size: normal;
+        font-weight: normal;
+    }
+
+body {
+    background-image: linear-gradient(to bottom, #F0F8FF,
+#B2EBF2);
+font: 600 1em 'DM Sans', helvetica, sans-serif;
+   background-attachment: fixed;
+}
+
+h1 {
+    color: #1A237E;
+    text-align: center;
+}
+
+h2 {
+    color: #1A237E;
+}
+
+h3 {
+    color: #424242;
+}
+
+h4 {
+    color: #424242;
+}
+h5{
+    color: rgb(161, 0, 0);
+}
+
+p {
+    color: #616161;
+    text-indent: 30px;
+}
+
+a {
+    color: #00BCD4;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover{
+    color: #008da0;
+}
+
+a:active{
+    color: #005f6b;
+
+}
+
+a:visited{
+    color: #003b42;
+
+}
+
+mark {
+    background-color: #B2EBF2;
+    color: #1A237E;           
+    padding: 0 4px;           
+    border-radius: 2px;
+}
+
+
+
+main {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #002714;
+    width: 800px;
+    padding: 10px;
+    margin: auto;
+}
+

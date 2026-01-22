@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+ @font-face {
+            font-family: 'Cloyster Black';
+            src: url(fonts/CloisterBlack.ttf) format('truetype');
+        }
+
+        body {
+            background-image: linear-gradient(to bottom, rgb(83, 83, 83), black, rgb(128, 70, 0) );
+            background-attachment: fixed;
+        }
+
+        h1 {
+             font: normal 3em 'Cloyster Black', Helvetica, sans-serif;
+             color: darkorange;
+        }
+
+        h2{
+            font: normal 2em 'Cloyster Black', Helvetica, sans-serif;
+            color: darkorange;
+        }
+        p {
+        font: normal 1em 'Cloyster Black', Helvetica, sans-serif;
+        color: antiquewhite;
+        }
+
+        ol, li {
+            font: normal 1em 'Cloyster Black', Helvetica, sans-serif;
+            color: darkgray;
+        }
