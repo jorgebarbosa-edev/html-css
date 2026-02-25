@@ -45,8 +45,14 @@
             background-color: transparent;
         }
 
+        input:active{
+            color: #fff;
+            background-color: transparent;
+        }
+
         .container-btn{
             margin-right: 20px;
+            cursor: pointer;
         }
 
         .container{
@@ -67,7 +73,7 @@
             border: 2px solid #ffffff5c;
             padding: 60px;
             border-radius: 9px;
-            box-shadow: 4px 4px 9px 7px rgba(0, 0, 0, 0.429);
+            box-shadow: 4px 4px 9px 7px rgba(0, 0, 0, 0.21);
             text-shadow: 1px;
             
         }
@@ -76,6 +82,7 @@
             margin-top: 20px;
             text-align: center;
             align-items: center;
+            cursor: pointer;
         }
         .container-btn input{
          margin-right:10px ;
@@ -86,6 +93,7 @@
         font-weight: bold;
         background-color: transparent;
         transition-duration: .7s;
+        
 
         }
 
@@ -108,15 +116,38 @@
             <h1>Cadastro</h1>
             <form action="cadastro.php">
                 <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome" required minlength="3" maxlength="10"></p>
-                <p><label for="iidade">Idade:</label> <input type="number" name="idade" id="iidade" required minlength="2"></p>
+                <p><label for="iidade">Idade:</label> <input type="number" name="idade" id="iidade" required minlength="2" min="18"></p>
                 <p><label for="isexo">Sexo:</label> <input type="text" name="sexo" id="isexo" required minlength="8" maxlength="9"></p>
-                <div class="container-btn">
-                    <input type="submit" value="Enviar">
+                <p><label for="iemail">Email:</label> <input type="email" name="email" id="iemail" required></p> 
+                <p><label for="isenha">Senha:</label> <input type="password" name="senha" id="isenha" required minlength="8" maxlength="
+                    15" ></p>
+
+                    <div class="container-btn" id="container-btn">
+                    <input id="enviar" type="submit" value="Enviar" onclick="validarFormulario()">
                     <input type="reset" value="Limpar">
                 </div>
-            </form>
+                 </form>
+            
         </div>
     </div>
+    <script>
+        const nomeInput = document.getElementById('inome');
+
+        function validarFormulario() {
+            const idadeInput = document.getElementById('iidade');
+            const idade = parseInt(idadeInput.value);
+            const nome = nomeInput.value
+
+            if(idade < 18){
+            alert('Idade Invalida! Serviço disponivel apenas para Usúarios maiores de idade.')
+            return false;
+            }
+
+            alert(`Parabéns ${nome}, Seu cadastro foi feito com sucesso.`)
+        }
+
+        
+    </script>
 </body>
 
 </html>
