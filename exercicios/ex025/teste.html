@@ -114,7 +114,7 @@
     <div class="container">
         <div class="container-form">
             <h1>Cadastro</h1>
-            <form action="cadastro.php">
+            <form action="https://www.youtube.com/watch?v=LVMHYzVS9Y4&list=RDLVMHYzVS9Y4&start_radio=1">
                 <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome" required minlength="3" maxlength="10"></p>
                 <p><label for="iidade">Idade:</label> <input type="number" name="idade" id="iidade" required minlength="2" min="18"></p>
                 <p><label for="isexo">Sexo:</label> <input type="text" name="sexo" id="isexo" required minlength="8" maxlength="9"></p>
@@ -123,7 +123,7 @@
                     15" ></p>
 
                     <div class="container-btn" id="container-btn">
-                    <input id="enviar" type="submit" value="Enviar" onclick="validarFormulario()">
+                    <input id="enviar" type="submit" value="Enviar" onclick="return validarFormulario()">
                     <input type="reset" value="Limpar">
                 </div>
                  </form>
@@ -132,18 +132,34 @@
     </div>
     <script>
         const nomeInput = document.getElementById('inome');
+        const idadeInput = document.getElementById('iidade');
+        const sexoInput = document.getElementById('isexo');
+        const senhaInput = document.getElementById('isenha');
 
         function validarFormulario() {
-            const idadeInput = document.getElementById('iidade');
+            
             const idade = parseInt(idadeInput.value);
-            const nome = nomeInput.value
+            const nome = nomeInput.value;
+            const sexo = sexoInput.value;
+            const senha = senhaInput.value;
 
             if(idade < 18){
-            alert('Idade Invalida! Serviço disponivel apenas para Usúarios maiores de idade.')
+            alert('Idade Invalida! Serviço disponivel apenas para Usúarios maiores de idade.');
             return false;
             }
 
-            alert(`Parabéns ${nome}, Seu cadastro foi feito com sucesso.`)
+            if (sexo.length < 8) {
+        alert('Sexo muito curto ou não identificado, por favor corrija-o.');
+        return false; 
+    }
+
+    if(senha.length < 8){
+        alert('Senha insuficiente, por favor corrija')
+        return false;
+    }
+
+            alert(`Parabéns ${nome}, Seu cadastro foi feito com sucesso.`);
+            return true;
         }
 
         
