@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Simples</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-content">
+            <h1>Preencha o Formulario</h1>
+            <form action="sitedeacesso.html" autocomplete="on">
+                <div class="primary-informations">
+
+                    <fieldset>
+                        <Legend>Informações Primarias</Legend>
+                        <p><label for="iname">Nome:</label> <input type="text" name="name" id="iname" required minlength="3" maxlength="10" autocomplete="name"></p>
+                        <p><label for="isurname">Sobrenome: </label><input type="text" name="surname" id="isurname" autocomplete="family-name"></p>
+                        <p><label for="iage">Idade</label>: <input type="number" name="age" id="iage" required maxlength="2"></p>
+                        <p> <label for="istate">Estado:</label>
+                            <select name="state" id="istate">
+                                <option value="" selected> --- Escolha ---</option>
+                                <optgroup label="Região Norte">
+                                    <option value="AC">Acre</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="TO">Tocantins</option>
+                                </optgroup>
+                                <optgroup label="Região Nordeste">
+                                    <option value="AL">Alagoas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PE">Pernanbuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="SE">Sergipe</option>
+                                </optgroup>
+                                <optgroup label="Região Centro-Oeste">
+                                    <option value="GO">Goiás</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="DF">Distrito Federal</option>
+                                </optgroup>
+                                <optgroup label="Região Sudeste">
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="ES">Espírito Santo</option>
+                                </optgroup>
+                                <optgroup label="Região Sul">
+                                    <option value="PR">Paraná</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="SC">Santa Catarina</option>
+                                </optgroup>
+                            </select>
+                        <p>Sexo:
+                            <input type="radio" name="Sex" id="isxM">
+                            <label for="isxM">Masculino</label>
+                            <input type="radio" name="Sex" id="isxF">
+                            <label for="isxF">Feminino</label>
+                        </p>
+                    </fieldset>
+
+                </div>
+
+
+                <div class="cadastro">
+                    <fieldset>
+                        <legend>Cadastro de login</legend>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                                <path
+                                    d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5m0-8c1.65 0 3 1.35 3 3s-1.35 3-3 3-3-1.35-3-3 1.35-3 3-3M4 22h16c.55 0 1-.45 1-1v-1c0-3.86-3.14-7-7-7h-4c-3.86 0-7 3.14-7 7v1c0 .55.45 1 1 1m6-7h4c2.76 0 5 2.24 5 5H5c0-2.76 2.24-5 5-5">
+                                </path>
+                            </svg> <input type="text" name="Username" id="iusermame" placeholder="Nome de Usuário..." autocomplete="nickname"></p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                                <path
+                                    d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10c1.47 0 2.96-.37 4.44-1.1l-.89-1.79c-1.2.59-2.4.9-3.56.9-4.41 0-8-3.59-8-8S7.59 4 12 4s8 3.59 8 8v1c0 .69-.31 2-1.5 2-1.4 0-1.49-1.82-1.5-2V8h-2v.03C14.16 7.4 13.13 7 12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5c1.45 0 2.75-.63 3.66-1.62.52.89 1.41 1.62 2.84 1.62 2.27 0 3.5-2.06 3.5-4v-1c0-5.51-4.49-10-10-10m0 13c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3">
+                                </path>
+                            </svg> <input type="email" name="email" id="iemail" placeholder="E-mail..." autocomplete="email"></p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                                <path
+                                    d="M6 22h12c1.1 0 2-.9 2-2v-9c0-1.1-.9-2-2-2h-1V7c0-2.76-2.24-5-5-5S7 4.24 7 7v2H6c-1.1 0-2 .9-2 2v9c0 1.1.9 2 2 2M9 7c0-1.65 1.35-3 3-3s3 1.35 3 3v2H9zm-3 4h12v9h-5v-2.28c.59-.35 1-.99 1-1.72 0-1.1-.9-2-2-2s-2 .9-2 2a2 2 0 0 0 1 1.72V20H6z">
+                                </path>
+                            </svg><input type="password" name="password" id="ipassword" placeholder="Senha..." autocomplete="new-password"></p>
+                    </fieldset>
+
+                    <div class="buttons">
+                        <input type="submit" value="Enviar">
+                        <span><input type="reset" value="Limpar"></span>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
